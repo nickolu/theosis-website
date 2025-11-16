@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theosis - Infernal Cathedral Theme */
+
+:root {
+  --color-darkness: #000000;
+  --color-crimson: #b6344e;
+  --color-heat: #dd8d52;
+  --color-ooze: #573861;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-darkness);
+  color: #ffffff;
+  font-family: var(--font-roboto);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-darkness);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ooze);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-crimson);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-grenze);
+  font-weight: 700;
+}
+
+/* Fire glow effect - subtle version for readability */
+.fire-glow {
+  text-shadow:
+    0 0 8px rgba(221, 141, 82, 0.4),
+    0 0 15px rgba(182, 52, 78, 0.3);
+}
+
+/* Strong fire glow for loader only */
+.fire-glow-strong {
+  text-shadow:
+    0 0 10px var(--color-heat),
+    0 0 20px var(--color-heat),
+    0 0 30px var(--color-crimson);
+}
+
+.crimson-glow {
+  box-shadow: 0 0 20px rgba(182, 52, 78, 0.5);
+}
+
+.heat-glow {
+  box-shadow: 0 0 20px rgba(221, 141, 82, 0.5);
+}
+
+/* Gothic border effect */
+.gothic-border {
+  border: 2px solid var(--color-ooze);
+  position: relative;
+}
+
+.gothic-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 1px solid var(--color-crimson);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--color-heat);
+  color: var(--color-darkness);
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background: var(--color-crimson);
+  box-shadow: 0 0 30px rgba(182, 52, 78, 0.6);
+}
+
+/* Link styles */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-heat);
+  text-shadow: 0 0 10px rgba(221, 141, 82, 0.5);
+}
+
+/* Page transition container */
+.page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Atmospheric background */
+.atmospheric-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(87, 56, 97, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(182, 52, 78, 0.1) 0%, transparent 50%),
+    var(--color-darkness);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Section divider */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-ooze) 20%,
+    var(--color-crimson) 50%,
+    var(--color-ooze) 80%,
+    transparent
+  );
+  margin: 4rem 0;
+}
+
+/* Card styles */
+.card {
+  background: rgba(87, 56, 97, 0.2);
+  border: 1px solid var(--color-ooze);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-crimson);
+  box-shadow: 0 0 30px rgba(182, 52, 78, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Loading animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
