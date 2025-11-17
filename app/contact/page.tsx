@@ -48,8 +48,8 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-crimson rounded-full blur-[120px]" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="font-display text-6xl md:text-8xl text-crimson fire-glow mb-6">
+        <div className="relative z-10 max-w-4xl mx-auto pt-12">
+          <h1 className="font-display text-6xl md:text-8xl text-crimson fire-glow my-6">
             CONTACT
           </h1>
           <p className="font-heading text-xl md:text-2xl text-white/80">

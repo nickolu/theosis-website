@@ -111,7 +111,7 @@ export default function Loader() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="space-y-4"
             >
-              <p className="font-display text-3xl text-crimson fire-glow-strong">
+              <p className="font-display text-3xl text-crimson fire-glow-weak">
                 ENTERING THE CATHEDRAL
               </p>
 

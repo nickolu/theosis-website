@@ -105,9 +105,9 @@ export default function BandPage() {
 
       {/* Band Story Section */}
       <PageSection>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-left">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-center text-heat fire-glow mb-12">
+          <h2 className="font-display text-5xl text-center text-heat fire-glow mb-12 text-center">
             OUR STORY
           </h2>
           <div className="space-y-6 text-white/80 font-body leading-relaxed">
@@ -138,7 +138,7 @@ export default function BandPage() {
       </PageSection>
 
       {/* Call to Action */}
-      <PageSection>
+      <PageSection className="mt-12 pb-12">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="font-display text-5xl text-crimson fire-glow">
             WITNESS THE RITUAL
