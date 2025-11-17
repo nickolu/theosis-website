@@ -4,11 +4,11 @@ import PageSection from "@/components/ui/page-section";
 
 
 const streamingLinks = [
-  { name: "Spotify", url: "https://open.spotify.com/artist/[artist-id]", icon: "🎵" },
-  { name: "Apple Music", url: "https://music.apple.com/artist/[artist-id]", icon: "🎵" },
-  { name: "Bandcamp", url: "https://theosis.bandcamp.com/", icon: "🎵" },
-  { name: "YouTube Music", url: "https://music.youtube.com/channel/[channel-id]", icon: "🎵" },
-  { name: "Amazon Music", url: "https://music.amazon.com/artists/[artist-id]", icon: "🎵" },
+  { name: "Spotify", url: "https://open.spotify.com/artist/[artist-id]", icon: "web.png" },
+  { name: "Apple Music", url: "https://music.apple.com/artist/[artist-id]", icon: "tree-and-moon.png" },
+  { name: "Bandcamp", url: "https://theosis.bandcamp.com/", icon: "chalice.png" },
+  { name: "YouTube Music", url: "https://music.youtube.com/channel/[channel-id]", icon: "video-play.png" },
+  { name: "Amazon Music", url: "https://music.amazon.com/artists/[artist-id]", icon: "headphones.png" },
 ];
 
 const tracks = [
@@ -152,8 +152,14 @@ export default function MusicPage() {
                 rel="noopener noreferrer"
                 className="card p-6 hover:scale-105 transition-all duration-300 group"
               >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-                  {platform.icon}
+                <div className="mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                  <Image
+                    src={`/images/icons/64/${platform.icon}`}
+                    alt="Stream"
+                    width={48}
+                    height={48}
+                    className="opacity-80"
+                  />
                 </div>
                 <h3 className="font-heading text-xl text-heat group-hover:text-crimson transition-colors">
                   {platform.name}

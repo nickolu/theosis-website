@@ -79,7 +79,13 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="card p-6 space-y-2">
                   <div className="flex items-center space-x-3">
-                    <span className="text-2xl">📧</span>
+                    <Image
+                      src="/images/icons/64/email.png"
+                      alt="Email"
+                      width={32}
+                      height={32}
+                      className="opacity-80"
+                    />
                     <div>
                       <h3 className="font-heading text-heat text-lg">Email</h3>
                       <a
@@ -94,7 +100,13 @@ export default function ContactPage() {
 
                 <div className="card p-6 space-y-2">
                   <div className="flex items-center space-x-3">
-                    <span className="text-2xl">📍</span>
+                    <Image
+                      src="/images/icons/64/location-pin.png"
+                      alt="Location"
+                      width={32}
+                      height={32}
+                      className="opacity-80"
+                    />
                     <div>
                       <h3 className="font-heading text-heat text-lg">Location</h3>
                       <p className="text-white/70 font-body">San Diego, California</p>
@@ -104,7 +116,13 @@ export default function ContactPage() {
 
                 <div className="card p-6 space-y-2">
                   <div className="flex items-center space-x-3">
-                    <span className="text-2xl">📱</span>
+                    <Image
+                      src="/images/icons/64/share.png"
+                      alt="Social Media"
+                      width={32}
+                      height={32}
+                      className="opacity-80"
+                    />
                     <div>
                       <h3 className="font-heading text-heat text-lg">Social Media</h3>
                       <div className="flex space-x-4 mt-2">

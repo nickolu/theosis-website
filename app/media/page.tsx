@@ -151,7 +151,15 @@ export default function MediaPage() {
 
             <div className="grid sm:grid-cols-2 gap-6 pt-8">
               <div className="border-2 border-ooze hover:border-crimson p-8 transition-all duration-300">
-                <div className="text-4xl mb-4">📷</div>
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src="/images/icons/64/raven.png"
+                    alt="Photos"
+                    width={48}
+                    height={48}
+                    className="opacity-80"
+                  />
+                </div>
                 <h3 className="font-heading text-xl text-heat mb-2">Photos</h3>
                 <p className="text-white/60 font-body text-sm mb-4">
                   High-res band photos and promo shots
@@ -162,7 +170,15 @@ export default function MediaPage() {
               </div>
 
               <div className="border-2 border-ooze hover:border-crimson p-8 transition-all duration-300">
-                <div className="text-4xl mb-4">🎨</div>
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src="/images/icons/64/download.png"
+                    alt="Downloads"
+                    width={48}
+                    height={48}
+                    className="opacity-80"
+                  />
+                </div>
                 <h3 className="font-heading text-xl text-heat mb-2">Logos & Assets</h3>
                 <p className="text-white/60 font-body text-sm mb-4">
                   Official logos and branding materials
@@ -193,19 +209,25 @@ export default function MediaPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "Facebook", icon: "📘" },
-              { name: "Instagram", icon: "📸" },
-              { name: "YouTube", icon: "📺" },
-              { name: "Bandcamp", icon: "🎵" },
-              { name: "Spotify", icon: "🎵" },
+              { name: "Facebook", icon: "like.png" },
+              { name: "Instagram", icon: "chalice.png" },
+              { name: "YouTube", icon: "video-play.png" },
+              { name: "Bandcamp", icon: "headphones.png" },
+              { name: "Spotify", icon: "web.png" },
             ].map((social) => (
               <a
                 key={social.name}
                 href="#"
                 className="card px-8 py-6 hover:scale-110 transition-all duration-300 group"
               >
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
-                  {social.icon}
+                <div className="mb-2 group-hover:scale-110 transition-transform flex justify-center">
+                  <Image
+                    src={`/images/icons/64/${social.icon}`}
+                    alt={social.name}
+                    width={40}
+                    height={40}
+                    className="opacity-80"
+                  />
                 </div>
                 <p className="font-heading text-heat group-hover:text-crimson transition-colors">
                   {social.name}

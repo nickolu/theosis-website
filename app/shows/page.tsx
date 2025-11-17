@@ -88,7 +88,14 @@ export default async function ShowsPage() {
             </div>
           ) : (
             <div className="card p-12 text-center space-y-6">
-              <div className="text-6xl opacity-50">🎸</div>
+              <div className="flex justify-center opacity-50">
+                <Image
+                  src="/images/icons/64/skull.png"
+                  alt=""
+                  width={80}
+                  height={80}
+                />
+              </div>
               <h3 className="font-heading text-2xl text-heat">
                 No Upcoming Shows Scheduled
               </h3>
@@ -200,7 +207,13 @@ export default async function ShowsPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="card p-8 space-y-4">
-              <div className="text-4xl">⚡</div>
+              <Image
+                src="/images/icons/64/candle.png"
+                alt="Raw Energy"
+                width={48}
+                height={48}
+                className="opacity-80 mx-auto"
+              />
               <h3 className="font-heading text-2xl text-heat">Raw Energy</h3>
               <p className="text-white/70 font-body leading-relaxed">
                 Experience the full force of melodic death metal with hard-hitting double bass,
@@ -209,7 +222,13 @@ export default async function ShowsPage() {
             </div>
 
             <div className="card p-8 space-y-4">
-              <div className="text-4xl">🔥</div>
+              <Image
+                src="/images/icons/64/cathedral.png"
+                alt="Dark Atmosphere"
+                width={48}
+                height={48}
+                className="opacity-80 mx-auto"
+              />
               <h3 className="font-heading text-2xl text-heat">Dark Atmosphere</h3>
               <p className="text-white/70 font-body leading-relaxed">
                 Enter the infernal cathedral as THEOSIS creates an immersive atmosphere
@@ -218,7 +237,13 @@ export default async function ShowsPage() {
             </div>
 
             <div className="card p-8 space-y-4">
-              <div className="text-4xl">🎸</div>
+              <Image
+                src="/images/icons/64/gear.png"
+                alt="Technical Precision"
+                width={48}
+                height={48}
+                className="opacity-80 mx-auto"
+              />
               <h3 className="font-heading text-2xl text-heat">Technical Precision</h3>
               <p className="text-white/70 font-body leading-relaxed">
                 Witness the technical mastery as the band delivers complex arrangements
@@ -227,7 +252,13 @@ export default async function ShowsPage() {
             </div>
 
             <div className="card p-8 space-y-4">
-              <div className="text-4xl">💀</div>
+              <Image
+                src="/images/icons/64/gravestone.png"
+                alt="Unforgettable"
+                width={48}
+                height={48}
+                className="opacity-80 mx-auto"
+              />
               <h3 className="font-heading text-2xl text-heat">Unforgettable</h3>
               <p className="text-white/70 font-body leading-relaxed">
                 A THEOSIS show is more than a concert—it&apos;s a ritual, a journey into darkness
