@@ -4,22 +4,24 @@ import PageSection from "@/components/ui/page-section";
 
 
 const streamingLinks = [
-  { name: "Spotify", url: "https://open.spotify.com/artist/[artist-id]", icon: "web.png" },
-  { name: "Apple Music", url: "https://music.apple.com/artist/[artist-id]", icon: "tree-and-moon.png" },
+  { name: "Spotify", url: "https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg", icon: "web.png" },
+  { name: "Apple Music", url: "https://music.apple.com/us/artist/theosis/1811099121", icon: "tree-and-moon.png" },
   { name: "Bandcamp", url: "https://theosis.bandcamp.com/", icon: "chalice.png" },
-  { name: "YouTube Music", url: "https://music.youtube.com/channel/[channel-id]", icon: "video-play.png" },
-  { name: "Amazon Music", url: "https://music.amazon.com/artists/[artist-id]", icon: "headphones.png" },
+  { name: "YouTube Music", url: "https://music.youtube.com/channel/UCW7v4lqhyLAAofSHNqHghmg?si=Ql-O_SMqIcOsWN7p", icon: "video-play.png" },
+  { name: "Amazon Music", url: "https://music.amazon.com/artists/B00MMMNZ0Q/theosis", icon: "headphones.png" },
 ];
 
 const tracks = [
-  "Track 1",
-  "Track 2",
-  "Track 3",
-  "Track 4",
-  "Track 5",
-  "Track 6",
-  "Track 7",
-  "Track 8",
+  { name: "Overture of the Damned", duration: "05:47" },
+  { name: "Deadlights", duration: "06:18" },
+  { name: "Carrion Eyes", duration: "05:56" },
+  { name: "The Insatiably Wretched", duration: "05:15" },
+  { name: "Tyrants of Salvation", duration: "06:11" },
+  { name: "Strings of Torment", duration: "04:29" },
+  { name: "Sever the Bloodline", duration: "03:30" },
+  { name: "Architects of Sapience: Pt 1", duration: "08:43" },
+  { name: "Interludio de fuego", duration: "01:50", instrumental: true },
+  { name: "Architects of Sapience: Pt 2", duration: "06:59" },
 ];
 
 export default function MusicPage() {
@@ -61,7 +63,7 @@ export default function MusicPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/images/demon.png"
-                  alt="The Plague and the Heretic"
+                  alt="Overture of the Damned"
                   width={500}
                   height={500}
                   className="object-contain opacity-60"
@@ -70,9 +72,9 @@ export default function MusicPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-darkness via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <h2 className="font-display text-4xl text-crimson fire-glow">
-                  THE PLAGUE
+                  Overture
                 </h2>
-                <p className="font-heading text-2xl text-heat">& THE HERETIC</p>
+                <p className="font-heading text-2xl text-heat">of the Damned</p>
               </div>
             </div>
 
@@ -80,29 +82,24 @@ export default function MusicPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-heading text-3xl text-heat mb-2">
-                  The Plague and the Heretic
+                  Overture of the Damned
                 </h3>
                 <p className="text-white/60 font-heading uppercase tracking-wider">
-                  Full-Length Album • October 2016
+                  Full-Length Album • May 2022
                 </p>
               </div>
 
               <div className="space-y-2">
                 <p className="text-white/80 font-body">
-                  <strong className="text-crimson">Label:</strong> Dead Sea Records
+                  <strong className="text-crimson">Recorded at:</strong> Clarity Recordings
                 </p>
                 <p className="text-white/80 font-body">
-                  <strong className="text-crimson">Recorded at:</strong> Rarefied Records, San Diego
-                </p>
-                <p className="text-white/80 font-body">
-                  <strong className="text-crimson">Mixed & Mastered by:</strong> Matt Van Alan
+                  <strong className="text-crimson">Mixed & Mastered by:</strong> Sean Tolle
                 </p>
               </div>
 
               <p className="text-white/70 font-body leading-relaxed">
-                A devastating debut that showcases THEOSIS&apos;s mastery of melodic death metal.
-                Combining speed, melody, and thrash with powerful vocals and harmonized guitar riffs,
-                this album is a journey through the infernal cathedral.
+                The second soul shattering record from THEOSIS&apos;s. A unique melodic death metal inspired by classic metal music. 
               </p>
 
               {/* Track List */}
@@ -119,13 +116,14 @@ export default function MusicPage() {
                       <span className="font-heading text-heat group-hover:text-crimson w-8">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-body">{track}</span>
+                      <span className="font-body flex-1">{track.name}</span>
+                      {track.instrumental && (
+                        <span className="text-white/40 text-sm italic">instrumental</span>
+                      )}
+                      <span className="font-heading text-white/50 text-sm">{track.duration}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-white/40 text-sm font-body italic mt-4">
-                  Track names can be updated with actual album track listing
-                </p>
               </div>
             </div>
           </div>

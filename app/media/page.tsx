@@ -18,9 +18,10 @@ const galleryImages = [
 
 // Placeholder video data
 const videos = [
-  { id: "dQw4w9WgXcQ", title: "Live Performance - [Song Title]", description: "Placeholder video ID - update with actual performance" },
-  { id: "dQw4w9WgXcQ", title: "Music Video - [Song Title]", description: "Placeholder video ID - update with actual music video" },
-  { id: "dQw4w9WgXcQ", title: "Behind the Scenes", description: "Placeholder video ID - update with actual BTS footage" },
+  // https://www.youtube.com/watch?v=LfKgzXIBC_U
+  { id: "LfKgzXIBC_U", title: "Overture of the Damned", description: "Official music video" },
+  // https://www.youtube.com/watch?v=Kyzgbmz3TG0
+  { id: "Kyzgbmz3TG0", title: "Deadlights", description: "Official lyric video" },
 ];
 
 type Category = "all" | "live" | "promo" | "behind";
@@ -59,7 +60,7 @@ export default function MediaPage() {
             VIDEOS
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {videos.map((video, index) => (
               <div key={index} className="card p-4 space-y-4">
                 <div className="aspect-video">
@@ -77,9 +78,6 @@ export default function MediaPage() {
             ))}
           </div>
 
-          <p className="text-center text-white/40 text-sm font-body mt-8">
-            Video IDs are placeholders - update with actual YouTube video IDs
-          </p>
         </div>
       </PageSection>
 
@@ -130,69 +128,6 @@ export default function MediaPage() {
               </div>
             ))}
           </div>
-
-          <p className="text-center text-white/40 text-sm font-body mt-8">
-            Gallery currently displays promotional artwork - add actual band photos
-          </p>
-        </div>
-      </PageSection>
-
-      {/* Press Kit Section */}
-      <PageSection>
-        <div className="max-w-4xl mx-auto">
-          <div className="section-divider" />
-          <div className="card p-12 text-center space-y-6">
-            <h2 className="font-display text-5xl text-heat fire-glow">
-              PRESS KIT
-            </h2>
-            <p className="font-heading text-xl text-white/70">
-              High-resolution photos, logos, and promotional materials for media and venues
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-6 pt-8">
-              <div className="border-2 border-ooze hover:border-crimson p-8 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <Image
-                    src="/images/icons/64/raven.png"
-                    alt="Photos"
-                    width={48}
-                    height={48}
-                    className="opacity-80"
-                  />
-                </div>
-                <h3 className="font-heading text-xl text-heat mb-2">Photos</h3>
-                <p className="text-white/60 font-body text-sm mb-4">
-                  High-res band photos and promo shots
-                </p>
-                <button className="text-crimson hover:text-heat transition-colors font-heading uppercase text-sm tracking-wider">
-                  Download →
-                </button>
-              </div>
-
-              <div className="border-2 border-ooze hover:border-crimson p-8 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <Image
-                    src="/images/icons/64/download.png"
-                    alt="Downloads"
-                    width={48}
-                    height={48}
-                    className="opacity-80"
-                  />
-                </div>
-                <h3 className="font-heading text-xl text-heat mb-2">Logos & Assets</h3>
-                <p className="text-white/60 font-body text-sm mb-4">
-                  Official logos and branding materials
-                </p>
-                <button className="text-crimson hover:text-heat transition-colors font-heading uppercase text-sm tracking-wider">
-                  Download →
-                </button>
-              </div>
-            </div>
-
-            <p className="text-white/40 text-sm font-body pt-4">
-              Press kit downloads can be set up with actual file hosting
-            </p>
-          </div>
         </div>
       </PageSection>
 
@@ -209,15 +144,17 @@ export default function MediaPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "Facebook", icon: "like.png" },
-              { name: "Instagram", icon: "chalice.png" },
-              { name: "YouTube", icon: "video-play.png" },
-              { name: "Bandcamp", icon: "headphones.png" },
-              { name: "Spotify", icon: "web.png" },
+              { name: "Facebook", icon: "like.png", url: "https://www.facebook.com/theosis.offical.usa/" },
+              { name: "Instagram", icon: "chalice.png", url: "https://www.instagram.com/theosis_official_usa/" },
+              { name: "YouTube", icon: "video-play.png", url: "https://www.youtube.com/channel/UCPe3ZiJqIy6d13NjizamsJQ" },
+              { name: "Bandcamp", icon: "headphones.png", url: "https://theosis.bandcamp.com/" },
+              { name: "Spotify", icon: "web.png", url: "https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg" },
             ].map((social) => (
               <a
                 key={social.name}
-                href="#"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="card px-8 py-6 hover:scale-110 transition-all duration-300 group"
               >
                 <div className="mb-2 group-hover:scale-110 transition-transform flex justify-center">

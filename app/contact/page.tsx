@@ -62,7 +62,7 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-1 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -89,10 +89,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-heading text-heat text-lg">Email</h3>
                       <a
-                        href="mailto:contact@theosis.com"
+                        href="mailto:theosis.official.usa@gmail.com"
                         className="text-white/70 hover:text-crimson transition-colors font-body"
                       >
-                        contact@theosis.com
+                        theosis.official.usa@gmail.com
                       </a>
                     </div>
                   </div>
@@ -126,13 +126,13 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-heading text-heat text-lg">Social Media</h3>
                       <div className="flex space-x-4 mt-2">
-                        <a href="#" className="text-white/70 hover:text-crimson transition-colors">
+                        <a href="https://www.facebook.com/theosis.offical.usa/" className="text-white/70 hover:text-crimson transition-colors" target="_blank" rel="noopener noreferrer">
                           Facebook
                         </a>
-                        <a href="#" className="text-white/70 hover:text-crimson transition-colors">
+                        <a href="https://www.instagram.com/theosis_official_usa/" className="text-white/70 hover:text-crimson transition-colors" target="_blank" rel="noopener noreferrer">
                           Instagram
                         </a>
-                        <a href="#" className="text-white/70 hover:text-crimson transition-colors">
+                        <a href="https://www.youtube.com/channel/UCPe3ZiJqIy6d13NjizamsJQ" className="text-white/70 hover:text-crimson transition-colors" target="_blank" rel="noopener noreferrer">
                           YouTube
                         </a>
                       </div>
@@ -168,88 +168,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="card p-8 text-left">
-              <h2 className="font-heading text-3xl text-heat mb-6">Send a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block font-heading text-white/80 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-darkness border-2 border-ooze focus:border-heat outline-none text-white font-body transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
 
-                <div>
-                  <label htmlFor="email" className="block font-heading text-white/80 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-darkness border-2 border-ooze focus:border-heat outline-none text-white font-body transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block font-heading text-white/80 mb-2">
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-darkness border-2 border-ooze focus:border-heat outline-none text-white font-body transition-colors"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="booking">Booking Inquiry</option>
-                    <option value="collaboration">Collaboration</option>
-                    <option value="press">Press & Media</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block font-heading text-white/80 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-darkness border-2 border-ooze focus:border-heat outline-none text-white font-body transition-colors resize-none"
-                    placeholder="Your message..."
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
-                </button>
-
-                <p className="text-white/40 text-sm font-body text-center">
-                  Form submission can be integrated with your preferred backend service
-                </p>
-              </form>
-            </div>
           </div>
         </div>
       </PageSection>

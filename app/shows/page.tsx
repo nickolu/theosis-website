@@ -164,38 +164,6 @@ export default async function ShowsPage() {
         </div>
       </PageSection>
 
-      {/* Mailing List Section */}
-      <PageSection>
-        <div className="max-w-3xl mx-auto">
-          <div className="section-divider" />
-          <div className="card p-12 text-center space-y-6">
-            <h2 className="font-display text-5xl text-heat fire-glow">
-              STAY UPDATED
-            </h2>
-            <p className="font-heading text-xl text-white/80">
-              Join our mailing list to be the first to know about upcoming shows,
-              new releases, and exclusive content.
-            </p>
-
-            {/* Mailing list form placeholder */}
-            <div className="max-w-md mx-auto pt-6">
-              <div className="space-y-4">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full px-6 py-4 bg-darkness border-2 border-ooze focus:border-heat outline-none text-white font-body transition-colors"
-                />
-                <button className="btn-primary w-full">
-                  Join the Congregation
-                </button>
-              </div>
-              <p className="text-white/40 text-sm font-body mt-4">
-                Form functionality can be integrated with your preferred email service
-              </p>
-            </div>
-          </div>
-        </div>
-      </PageSection>
 
       {/* Live Performance Info */}
       <PageSection>

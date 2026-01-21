@@ -42,7 +42,7 @@ export default function Home() {
               Overture of the Damned
             </h1>
             <p className="font-heading text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Listen on <a href="https://open.spotify.com/album/1234567890" className="text-heat hover:text-crimson transition-colors">Spotify</a> and <Link href="/music" className="text-heat hover:text-crimson transition-colors">other streaming platforms</Link>
+              Listen on <a href="https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg" className="text-heat hover:text-crimson transition-colors">Spotify</a> and <Link href="/music" className="text-heat hover:text-crimson transition-colors">other streaming platforms</Link>
               
             </p>
           </div>
@@ -74,11 +74,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="font-display text-5xl text-crimson fire-glow">
-                THE PLAGUE
+                Overture
               </h2>
-              <h3 className="font-heading text-2xl text-heat">& THE HERETIC</h3>
+              <h3 className="font-heading text-2xl text-heat">of the Damned</h3>
               <p className="text-white/80 leading-relaxed font-body">
-                Forged in the fires of San Diego in 2012, <strong className="text-crimson">THEOSIS</strong> combines
+                Forged in the fires of San Diego in 2022, <strong className="text-crimson">THEOSIS</strong> combines
                 the brutal precision of melodic death metal with the relentless energy of speed and thrash.
               </p>
               <p className="text-white/80 leading-relaxed font-body">
@@ -114,14 +114,14 @@ export default function Home() {
           </h2>
           <div className="max-w-2xl mx-auto card p-8 space-y-6">
             <h3 className="font-heading text-3xl text-crimson">
-              The Plague and the Heretic
+              Overture of the Damned
             </h3>
             <p className="text-white/70 font-body">
-              Released October 2016 via Dead Sea Records
+              Released May 2022 via Clarity Recordings
             </p>
             <p className="text-white/80 font-body leading-relaxed">
-              Recorded at Rarefied Records in San Diego by Matt Van Alan.
-              A devastating debut album that showcases the band&apos;s mastery of melodic death metal.
+              Recorded at Clarity Recordings in San Diego by Sean Tolle.
+              A unique melodic death metal inspired by classic metal music.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               <Link href="/music" className="btn-primary">

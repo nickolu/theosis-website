@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import AtmosphericParticles from "@/components/AtmosphericParticles";
 import Loader from "@/components/Loader";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 // Font configurations
 const unifraktur = UnifrakturCook({
@@ -30,7 +31,7 @@ const roboto = Roboto_Serif({
 export const metadata: Metadata = {
   title: "THEOSIS - San Diego Death Metal",
   description: "Theosis - Melodic death metal band from San Diego. Combining speed, melodic, and thrash metal with powerful vocals and harmonized guitar riffs.",
-  keywords: ["Theosis", "death metal", "San Diego", "metal band", "The Plague and the Heretic"],
+  keywords: ["Theosis", "death metal", "San Diego", "metal band", "Overture of the Damned"],
   openGraph: {
     title: "THEOSIS - San Diego Death Metal",
     description: "Melodic death metal from the depths of San Diego",
@@ -47,7 +48,7 @@ export default function RootLayout({
     <html lang="en" className={`${unifraktur.variable} ${grenze.variable} ${roboto.variable}`}>
       <body>
         <Loader />
-        <div className="atmospheric-bg" />
+        <ParallaxBackground />
         <AtmosphericParticles />
         <Navigation />
         <main>

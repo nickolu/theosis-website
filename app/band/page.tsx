@@ -28,13 +28,13 @@ const bandMembers = [
     bio: "Weaving intricate melodic passages and devastating harmonies, Lee's guitar work brings both beauty and destruction to the Theosis sound.",
   },
   {
-    name: "Shane Sarpy",
+    name: "Zach Herriot",
     role: "Bass",
     image: "/images/lizardman.png",
     bio: "Anchoring the low end with crushing precision, Shane's bass lines form the rumbling foundation upon which our cathedral of sound is built.",
   },
   {
-    name: "Omar Gutierrez",
+    name: "Nick Mafi",
     role: "Drums",
     image: "/images/zombies.png",
     bio: "The relentless heartbeat of Theosis. Omar's hard-hitting double bass and technical prowess drive the band's unstoppable energy and speed.",
@@ -118,13 +118,19 @@ export default function BandPage() {
             </p>
             <p className="text-lg">
               Assembling a lineup of dedicated musicians—John Haskin on vocals, Lee Burgos on guitar,
-              Shane Sarpy on bass, and Omar Gutierrez on drums—the band quickly established themselves
+              Zach Herriot on bass, and Nick Mafi on drums—the band quickly established themselves
               as a force in the San Diego metal scene.
             </p>
             <p className="text-lg">
               In October 2016, THEOSIS unleashed their debut album{" "}
               <strong className="text-heat">&quot;The Plague and the Heretic&quot;</strong> via their own
               label, Dead Sea Records. Recorded at Rarefied Records by Matt Van Alan, the album
+              showcased the band&apos;s signature blend of harmonized guitar riffs, powerful vocals,
+              and relentless double bass drumming.
+            </p>
+            <p className="text-lg">
+              In May 2022, THEOSIS unleashed their second album{" "}
+              <strong className="text-heat">&quot;Overture of the Damned&quot;</strong> via Clarity Recordings. Recorded at Clarity Recordings by Sean Tolle, the album
               showcased the band&apos;s signature blend of harmonized guitar riffs, powerful vocals,
               and relentless double bass drumming.
             </p>
