@@ -3,10 +3,19 @@ import type { Metadata } from "next";
 import PageSection from "@/components/ui/page-section";
 import DefaultPage from "@/components/templates/page/default";
 import { getShows } from "@/lib/google-sheets";
+import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: "Shows - THEOSIS",
-  description: "Upcoming and past live performances by Theosis",
+  title: "Live Shows & Tour Dates",
+  description: "Catch THEOSIS live in San Diego and beyond. View upcoming shows, past performances, and get tickets.",
+  alternates: {
+    canonical: `${siteConfig.url}/shows`,
+  },
+  openGraph: {
+    title: "Live Shows - THEOSIS",
+    description: "Witness THEOSIS live. Check out our upcoming tour dates and past performances.",
+    url: `${siteConfig.url}/shows`,
+  },
 };
 
 // Disable caching to fetch fresh data on every page load

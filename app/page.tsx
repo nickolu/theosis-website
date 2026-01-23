@@ -1,10 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import { siteConfig } from "@/lib/seo-config";
+import { generateMusicGroupSchema, generateMusicAlbumSchema } from "@/lib/structured-data";
+
+export const metadata: Metadata = {
+  title: "THEOSIS - San Diego Death Metal",
+  description: "Theosis - Melodic death metal band from San Diego. Stream our latest album 'Overture of the Damned' and catch us live.",
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function Home() {
   return (
     <div className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            generateMusicGroupSchema(),
+            generateMusicAlbumSchema(),
+          ]),
+        }}
+      />
       {/* Hero Section with Video Above the Fold */}
       <section className="relative py-12 md:py-20 px-2 overflow-hidden">
         {/* Background monster artwork */}

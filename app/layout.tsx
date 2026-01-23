@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import AtmosphericParticles from "@/components/AtmosphericParticles";
 import Loader from "@/components/Loader";
 import ParallaxBackground from "@/components/ParallaxBackground";
+import { defaultMetadata } from "@/lib/seo-config";
+import { generateWebsiteSchema } from "@/lib/structured-data";
 
 // Font configurations
 const unifraktur = UnifrakturCook({
@@ -28,16 +30,7 @@ const roboto = Roboto_Serif({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "THEOSIS - San Diego Death Metal",
-  description: "Theosis - Melodic death metal band from San Diego. Combining speed, melodic, and thrash metal with powerful vocals and harmonized guitar riffs.",
-  keywords: ["Theosis", "death metal", "San Diego", "metal band", "Overture of the Damned"],
-  openGraph: {
-    title: "THEOSIS - San Diego Death Metal",
-    description: "Melodic death metal from the depths of San Diego",
-    images: ["/images/logo.png"],
-  },
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
@@ -47,6 +40,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${unifraktur.variable} ${grenze.variable} ${roboto.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateWebsiteSchema()),
+          }}
+        />
         <Loader />
         <ParallaxBackground />
         <AtmosphericParticles />

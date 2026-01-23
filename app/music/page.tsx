@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import DefaultPage from "@/components/templates/page/default";
 import PageSection from "@/components/ui/page-section";
+import { siteConfig } from "@/lib/seo-config";
+import { generateMusicAlbumSchema } from "@/lib/structured-data";
 
+export const metadata: Metadata = {
+  title: "Music & Discography",
+  description: "Listen to THEOSIS music on Spotify, Apple Music, YouTube Music, and Bandcamp. Stream our latest album 'Overture of the Damned' now.",
+  alternates: {
+    canonical: `${siteConfig.url}/music`,
+  },
+  openGraph: {
+    title: "Music & Discography - THEOSIS",
+    description: "Stream THEOSIS on all platforms - Spotify, Apple Music, YouTube Music, and Bandcamp",
+    url: `${siteConfig.url}/music`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "THEOSIS Music",
+      },
+    ],
+  },
+};
 
 const streamingLinks = [
   { name: "Spotify", url: "https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg", icon: "web.png" },
@@ -27,6 +50,12 @@ const tracks = [
 export default function MusicPage() {
   return (
     <DefaultPage>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateMusicAlbumSchema()),
+        }}
+      />
       {/* Hero Section */}
       <PageSection>
         {/* Background monster artwork */}

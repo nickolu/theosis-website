@@ -2,10 +2,19 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import DefaultPage from "@/components/templates/page/default";
 import PageSection from "@/components/ui/page-section";
+import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: "Band Members - THEOSIS",
-  description: "Meet the members of Theosis - San Diego's melodic death metal powerhouse",
+  title: "Band Members",
+  description: "Meet the members of THEOSIS - John Haskin (vocals), Dana Roselli (guitar), Lee Burgos (guitar), Zach Herriot (bass), and Nick Mafi (drums). San Diego melodic death metal.",
+  alternates: {
+    canonical: `${siteConfig.url}/band`,
+  },
+  openGraph: {
+    title: "Band Members - THEOSIS",
+    description: "Meet the architects of darkness - the members of THEOSIS",
+    url: `${siteConfig.url}/band`,
+  },
 };
 
 const bandMembers = [
@@ -31,7 +40,7 @@ const bandMembers = [
     name: "Zach Herriot",
     role: "Bass",
     image: "/images/lizardman.png",
-    bio: "Anchoring the low end with crushing precision, Shane's bass lines form the rumbling foundation upon which our cathedral of sound is built.",
+    bio: "Anchoring the low end with crushing precision, Zach's bass lines form the rumbling foundation upon which our cathedral of sound is built.",
   },
   {
     name: "Nick Mafi",
