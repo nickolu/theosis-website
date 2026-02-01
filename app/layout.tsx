@@ -39,13 +39,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${unifraktur.variable} ${grenze.variable} ${roboto.variable}`}>
-      <body>
+      <head>
+      <meta name="google-site-verification" content="67rHj0EaJX7OOkLoeDxYmhJnaBqtA4aS5QjRyugPfz8" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateWebsiteSchema()),
           }}
         />
+      </head>
+      <body>
         <Loader />
         <ParallaxBackground />
         <AtmosphericParticles />

@@ -3,7 +3,6 @@ import Image from "next/image";
 import DefaultPage from "@/components/templates/page/default";
 import PageSection from "@/components/ui/page-section";
 import { siteConfig } from "@/lib/seo-config";
-import { generateMusicAlbumSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Music & Discography",
@@ -50,12 +49,6 @@ const tracks = [
 export default function MusicPage() {
   return (
     <DefaultPage>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateMusicAlbumSchema()),
-        }}
-      />
       {/* Hero Section */}
       <PageSection>
         {/* Background monster artwork */}
