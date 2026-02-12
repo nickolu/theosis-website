@@ -14,12 +14,12 @@ export default function YouTubePlayer({
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="relative w-full aspect-video bg-ooze/20 rounded-lg overflow-hidden gothic-border">
+    <div className="relative w-full aspect-video bg-charcoal rounded-lg overflow-hidden gothic-border">
       {!isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4">
-            <div className="w-16 h-16 border-4 border-heat border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-white/60 font-heading">Loading video...</p>
+            <div className="w-16 h-16 border-4 border-brass border-t-transparent rounded-full animate-spin mx-auto" />
+            <p className="text-bone/70 font-heading">Loading video...</p>
           </div>
         </div>
       )}

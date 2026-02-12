@@ -40,7 +40,7 @@ export default function Loader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-darkness"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-abyss"
         >
           {/* Animated background effects */}
           <div className="absolute inset-0 overflow-hidden">
@@ -54,7 +54,7 @@ export default function Loader() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-1/4 left-1/4 w-96 h-96 bg-crimson rounded-full blur-[150px]"
+              className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold rounded-full blur-[150px]"
             />
             <motion.div
               animate={{
@@ -67,7 +67,7 @@ export default function Loader() {
                 ease: "easeInOut",
                 delay: 1.5,
               }}
-              className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-heat rounded-full blur-[150px]"
+              className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brass rounded-full blur-[150px]"
             />
           </div>
 
@@ -82,9 +82,9 @@ export default function Loader() {
               <motion.div
                 animate={{
                   filter: [
-                    "drop-shadow(0 0 20px rgba(182, 52, 78, 0.8))",
-                    "drop-shadow(0 0 40px rgba(221, 141, 82, 0.8))",
-                    "drop-shadow(0 0 20px rgba(182, 52, 78, 0.8))",
+                    "drop-shadow(0 0 20px rgba(201, 164, 107, 0.8))",
+                    "drop-shadow(0 0 40px rgba(169, 131, 78, 0.8))",
+                    "drop-shadow(0 0 20px rgba(201, 164, 107, 0.8))",
                   ],
                 }}
                 transition={{
@@ -111,25 +111,25 @@ export default function Loader() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="space-y-4"
             >
-              <p className="font-display text-3xl text-crimson fire-glow-weak">
+              <p className="font-display text-3xl text-gold fire-glow-weak">
                 ENTERING THE CATHEDRAL
               </p>
 
               {/* Progress bar */}
               <div className="w-80 max-w-full mx-auto">
-                <div className="h-1 bg-ooze/30 rounded-full overflow-hidden gothic-border">
+                <div className="h-1 bg-stone/30 rounded-full overflow-hidden gothic-border">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-crimson via-heat to-crimson"
+                    className="h-full bg-gradient-to-r from-brass via-gold to-brass"
                     style={{
-                      boxShadow: "0 0 20px rgba(221, 141, 82, 0.6)",
+                      boxShadow: "0 0 20px rgba(201, 164, 107, 0.6)",
                     }}
                   />
                 </div>
                 <motion.p
-                  className="font-heading text-heat text-sm mt-2 tracking-wider"
+                  className="font-heading text-brass text-sm mt-2 tracking-wider"
                   animate={{ opacity: [0.5, 1, 0.5] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -147,7 +147,7 @@ export default function Loader() {
                 {[0, 1, 2].map((i) => (
                   <motion.div
                     key={i}
-                    className="w-2 h-2 bg-crimson rounded-full"
+                    className="w-2 h-2 bg-brass rounded-full"
                     animate={{
                       scale: [1, 1.5, 1],
                       opacity: [0.3, 1, 0.3],
@@ -175,7 +175,7 @@ export default function Loader() {
               <svg
                 viewBox="0 0 200 200"
                 className="w-full h-full opacity-20"
-                style={{ filter: "drop-shadow(0 0 10px rgba(182, 52, 78, 0.5))" }}
+                style={{ filter: "drop-shadow(0 0 10px rgba(201, 164, 107, 0.5))" }}
               >
                 <circle
                   cx="100"
@@ -184,7 +184,7 @@ export default function Loader() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="0.5"
-                  className="text-crimson"
+                  className="text-gold"
                 />
                 <circle
                   cx="100"
@@ -193,7 +193,7 @@ export default function Loader() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="0.5"
-                  className="text-heat"
+                  className="text-brass"
                 />
                 <circle
                   cx="100"
@@ -202,7 +202,7 @@ export default function Loader() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="0.5"
-                  className="text-ooze"
+                  className="text-necrotic"
                 />
                 {/* Pentagram-like lines */}
                 <path
@@ -210,7 +210,7 @@ export default function Loader() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="0.5"
-                  className="text-crimson"
+                  className="text-brass"
                 />
               </svg>
             </motion.div>

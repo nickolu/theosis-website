@@ -33,7 +33,7 @@ export default async function ShowsPage() {
         {/* Background monster artwork */}
         <div className="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none">
           <Image
-            src="/images/zombies.png"
+            src="/images/zombies-xl.png"
             alt=""
             width={1200}
             height={1200}
@@ -42,13 +42,13 @@ export default async function ShowsPage() {
         </div>
 
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/3 left-1/2 w-96 h-96 bg-crimson rounded-full blur-[120px]" />
+          <div className="absolute top-1/3 left-1/2 w-96 h-96 bg-gold rounded-full blur-[120px]" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="font-display text-6xl md:text-8xl text-crimson fire-glow mb-6">
+          <h1 className="font-display text-6xl md:text-8xl text-gold fire-glow mb-6">
             LIVE SHOWS
           </h1>
-          <p className="font-heading text-xl md:text-2xl text-white/80">
+          <p className="font-heading text-xl md:text-2xl text-bone/90">
             Witness the ritual. Experience the infernal cathedral.
           </p>
           <div className="section-divider" />
@@ -58,7 +58,7 @@ export default async function ShowsPage() {
       {/* Upcoming Shows Section */}
       <PageSection>
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-5xl text-heat fire-glow mb-12 text-center">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-12 text-center">
             UPCOMING SHOWS
           </h2>
 
@@ -70,21 +70,21 @@ export default async function ShowsPage() {
                   className="card p-8 hover:scale-[1.02] transition-all duration-300"
                 >
                     <div className="grid md:grid-cols-5 gap-4 items-center">
-                      <div className="font-heading text-heat text-lg">
+                      <div className="font-heading text-brass text-lg">
                         {show.date}
                       </div>
                       <div className="md:col-span-2">
-                        <h3 className="font-heading text-xl text-white mb-1">
+                        <h3 className="font-heading text-xl text-bone mb-1">
                           {show.venue}
                         </h3>
-                        <p className="text-white/60 font-body text-sm">
+                        <p className="text-bone/70 font-body text-sm">
                           {show.location}
                         </p>
                       </div>
-                      <div className="text-white/70 font-body text-sm md:text-right">
+                      <div className="text-bone/80 font-body text-sm md:text-right">
                         {show.notes}
                       </div>
-                      <div className="text-white/70 font-body text-sm md:text-right">
+                      <div className="text-bone/80 font-body text-sm md:text-right">
                         {show.ticketLink && (
                           <a href={show.ticketLink} target="_blank" rel="noopener noreferrer" className="btn-primary">
                             Buy Tickets
@@ -105,10 +105,10 @@ export default async function ShowsPage() {
                   height={80}
                 />
               </div>
-              <h3 className="font-heading text-2xl text-heat">
+              <h3 className="font-heading text-2xl text-brass">
                 No Upcoming Shows Scheduled
               </h3>
-              <p className="text-white/70 font-body max-w-2xl mx-auto">
+              <p className="text-bone/80 font-body max-w-2xl mx-auto">
                 The cathedral is currently silent, but the ritual will return.
                 Stay tuned for announcements of future performances.
               </p>
@@ -121,7 +121,7 @@ export default async function ShowsPage() {
                 </a>
                 <a
                   href="#mailing-list"
-                  className="px-8 py-3 border-2 border-heat text-heat hover:bg-heat hover:text-darkness transition-all duration-300 font-heading uppercase tracking-wider"
+                  className="px-8 py-3 border-2 border-brass text-brass hover:bg-parchment hover:text-abyss transition-all duration-300 font-heading uppercase tracking-wider"
                 >
                   Join Mailing List
                 </a>
@@ -135,7 +135,7 @@ export default async function ShowsPage() {
       <PageSection>
         <div className="max-w-5xl mx-auto">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-crimson fire-glow mb-12 text-center">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-12 text-center">
             PAST PERFORMANCES
           </h2>
 
@@ -144,21 +144,21 @@ export default async function ShowsPage() {
               {pastShows.map((show, index) => (
                 <div
                   key={index}
-                  className="card p-6 hover:border-crimson transition-all duration-300"
+                  className="card p-6 hover:border-brass transition-all duration-300"
                 >
                   <div className="grid md:grid-cols-4 gap-4 items-center">
-                    <div className="font-heading text-heat text-lg">
+                    <div className="font-heading text-brass text-lg">
                       {show.date}
                     </div>
                     <div className="md:col-span-2">
-                      <h3 className="font-heading text-xl text-white mb-1">
+                      <h3 className="font-heading text-xl text-bone mb-1">
                         {show.venue}
                       </h3>
-                      <p className="text-white/60 font-body text-sm">
+                      <p className="text-bone/70 font-body text-sm">
                         {show.location}
                       </p>
                     </div>
-                    <div className="text-white/70 font-body text-sm md:text-right">
+                    <div className="text-bone/80 font-body text-sm md:text-right">
                       {show.notes}
                     </div>
                   </div>
@@ -166,7 +166,7 @@ export default async function ShowsPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center text-white/50 font-body">
+            <div className="text-center text-bone/60 font-body">
               <p>Show history will be updated soon</p>
             </div>
           )}
@@ -178,7 +178,7 @@ export default async function ShowsPage() {
       <PageSection>
         <div className="max-w-4xl mx-auto">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-center text-crimson fire-glow mb-12">
+          <h2 className="font-display text-5xl text-center text-gold fire-glow mb-12">
             THE LIVE EXPERIENCE
           </h2>
 
@@ -191,8 +191,8 @@ export default async function ShowsPage() {
                 height={48}
                 className="opacity-80 mx-auto"
               />
-              <h3 className="font-heading text-2xl text-heat">Raw Energy</h3>
-              <p className="text-white/70 font-body leading-relaxed">
+              <h3 className="font-heading text-2xl text-brass">Raw Energy</h3>
+              <p className="text-bone/80 font-body leading-relaxed">
                 Experience the full force of melodic death metal with hard-hitting double bass,
                 harmonized guitar riffs, and powerful vocals that shake the foundations.
               </p>
@@ -206,8 +206,8 @@ export default async function ShowsPage() {
                 height={48}
                 className="opacity-80 mx-auto"
               />
-              <h3 className="font-heading text-2xl text-heat">Dark Atmosphere</h3>
-              <p className="text-white/70 font-body leading-relaxed">
+              <h3 className="font-heading text-2xl text-brass">Dark Atmosphere</h3>
+              <p className="text-bone/80 font-body leading-relaxed">
                 Enter the infernal cathedral as THEOSIS creates an immersive atmosphere
                 of darkness, ritual, and overwhelming sonic grandeur.
               </p>
@@ -221,8 +221,8 @@ export default async function ShowsPage() {
                 height={48}
                 className="opacity-80 mx-auto"
               />
-              <h3 className="font-heading text-2xl text-heat">Technical Precision</h3>
-              <p className="text-white/70 font-body leading-relaxed">
+              <h3 className="font-heading text-2xl text-brass">Technical Precision</h3>
+              <p className="text-bone/80 font-body leading-relaxed">
                 Witness the technical mastery as the band delivers complex arrangements
                 with surgical precision and relentless intensity.
               </p>
@@ -236,8 +236,8 @@ export default async function ShowsPage() {
                 height={48}
                 className="opacity-80 mx-auto"
               />
-              <h3 className="font-heading text-2xl text-heat">Unforgettable</h3>
-              <p className="text-white/70 font-body leading-relaxed">
+              <h3 className="font-heading text-2xl text-brass">Unforgettable</h3>
+              <p className="text-bone/80 font-body leading-relaxed">
                 A THEOSIS show is more than a concert—it&apos;s a ritual, a journey into darkness
                 that will leave a lasting mark on your soul.
               </p>
@@ -249,13 +249,13 @@ export default async function ShowsPage() {
       {/* Booking CTA */}
       <PageSection>
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-heat rounded-full blur-[150px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold rounded-full blur-[150px]" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto space-y-8 mt-12">
-          <h2 className="font-display text-6xl text-crimson fire-glow">
+          <h2 className="font-display text-6xl text-gold fire-glow">
             BOOK THEOSIS
           </h2>
-          <p className="font-heading text-xl text-white/80">
+          <p className="font-heading text-xl text-bone/90">
             Bring the infernal cathedral to your venue
           </p>
           <a href="/contact" className="btn-primary inline-block">

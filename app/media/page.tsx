@@ -8,11 +8,12 @@ import DefaultPage from "@/components/templates/page/default";
 
 // Placeholder gallery images using available monster artwork
 const galleryImages = [
+  { src: "/images/conductor.png", alt: "The Conductor", category: "promo" },
   { src: "/images/demon.png", alt: "Demon Performance", category: "live" },
-  { src: "/images/organist.png", alt: "The Organist", category: "promo" },
   { src: "/images/bug-monster.png", alt: "Bug Monster", category: "promo" },
   { src: "/images/lizardman.png", alt: "Lizardman", category: "promo" },
-  { src: "/images/zombies.png", alt: "Zombies", category: "promo" },
+  { src: "/images/zombies-xl.png", alt: "Zombies", category: "live" },
+  { src: "/images/organist.png", alt: "The Organist", category: "promo" },
   { src: "/images/logo.png", alt: "Theosis Logo", category: "promo" },
 ];
 
@@ -40,13 +41,13 @@ export default function MediaPage() {
       {/* Hero Section */}
       <PageSection>
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-heat rounded-full blur-[120px]" />
+          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-gold rounded-full blur-[120px]" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="font-display text-6xl md:text-8xl text-heat fire-glow mb-6">
+          <h1 className="font-display text-6xl md:text-8xl text-gold fire-glow mb-6">
             MEDIA
           </h1>
-          <p className="font-heading text-xl md:text-2xl text-white/80">
+          <p className="font-heading text-xl md:text-2xl text-bone/90">
             Visual chronicles from the infernal cathedral
           </p>
           <div className="section-divider" />
@@ -56,7 +57,7 @@ export default function MediaPage() {
       {/* Videos Section */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-5xl text-crimson fire-glow mb-12 text-center">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-12 text-center">
             VIDEOS
           </h2>
 
@@ -67,10 +68,10 @@ export default function MediaPage() {
                   <YouTubePlayer videoId={video.id} title={video.title} />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl text-heat mb-2">
+                  <h3 className="font-heading text-xl text-brass mb-2">
                     {video.title}
                   </h3>
-                  <p className="text-white/60 font-body text-sm">
+                  <p className="text-bone/70 font-body text-sm">
                     {video.description}
                   </p>
                 </div>
@@ -85,7 +86,7 @@ export default function MediaPage() {
       <PageSection>
         <div className="max-w-7xl mx-auto">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-crimson fire-glow mb-8 text-center">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-8 text-center">
             PHOTO GALLERY
           </h2>
 
@@ -97,8 +98,8 @@ export default function MediaPage() {
                 onClick={() => setSelectedCategory(category as Category)}
                 className={`px-6 py-3 font-heading uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-heat text-darkness"
-                    : "border-2 border-ooze text-white hover:border-crimson hover:text-crimson"
+                    ? "bg-brass text-abyss"
+                    : "border-2 border-stone text-bone hover:border-brass hover:text-parchment"
                 }`}
               >
                 {category === "all" ? "All Photos" : category}
@@ -111,7 +112,7 @@ export default function MediaPage() {
             {filteredImages.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-square cursor-pointer group overflow-hidden gothic-border bg-darkness"
+                className="relative aspect-square cursor-pointer group overflow-hidden gothic-border bg-abyss"
                 onClick={() => setLightboxImage(image.src)}
               >
                 <Image
@@ -120,9 +121,9 @@ export default function MediaPage() {
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-darkness via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-abyss via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="font-heading text-heat">{image.alt}</p>
+                    <p className="font-heading text-brass">{image.alt}</p>
                   </div>
                 </div>
               </div>
@@ -135,10 +136,10 @@ export default function MediaPage() {
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-crimson fire-glow mb-8">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-8">
             FOLLOW US
           </h2>
-          <p className="font-heading text-xl text-white/70 mb-12">
+          <p className="font-heading text-xl text-bone/80 mb-12">
             Stay connected and join the congregation
           </p>
 
@@ -166,7 +167,7 @@ export default function MediaPage() {
                     className="opacity-80"
                   />
                 </div>
-                <p className="font-heading text-heat group-hover:text-crimson transition-colors">
+                <p className="font-heading text-brass group-hover:text-parchment transition-colors">
                   {social.name}
                 </p>
               </a>
@@ -178,11 +179,11 @@ export default function MediaPage() {
       {/* Lightbox */}
       {lightboxImage && (
         <div
-          className="fixed inset-0 z-50 bg-darkness/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-abyss/95 flex items-center justify-center p-4"
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-8 right-8 text-white hover:text-crimson text-4xl transition-colors"
+            className="absolute top-8 right-8 text-bone hover:text-brass text-4xl transition-colors"
             onClick={() => setLightboxImage(null)}
           >
             ×
