@@ -30,7 +30,7 @@ export default function Home() {
         {/* Background monster artwork */}
         <div className="absolute inset-0 flex items-center justify-center opacity-15">
           <Image
-            src="/images/organist.png"
+            src="/images/conductor.png"
             alt=""
             width={1200}
             height={1200}
@@ -41,7 +41,7 @@ export default function Home() {
         {/* Background accent */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-crimson rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-heat rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold rounded-full blur-[120px]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -58,11 +58,11 @@ export default function Home() {
               />
             </div>
 
-            <h1 className="font-display text-3xl md:text-5xl text-crimson fire-glow">
+            <h1 className="font-display text-3xl md:text-5xl text-gold fire-glow">
               Overture of the Damned
             </h1>
-            <p className="font-heading text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Listen on <a href="https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg" className="text-heat hover:text-crimson transition-colors">Spotify</a> and <Link href="/music" className="text-heat hover:text-crimson transition-colors">other streaming platforms</Link>
+            <p className="font-heading text-lg md:text-xl text-bone max-w-2xl mx-auto">
+              Listen on <a href="https://open.spotify.com/artist/0dLaSYhBMWeeHBe0ANAyvc?si=bGN0V0s_TYmV8EZI6lUvrg" className="text-brass hover:text-parchment transition-colors">Spotify</a> and <Link href="/music" className="text-brass hover:text-parchment transition-colors">other streaming platforms</Link>
               
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
             </Link>
             <Link
               href="/shows"
-              className="px-8 py-3 border-2 border-heat text-heat hover:bg-heat hover:text-darkness transition-all duration-300 font-heading uppercase tracking-wider"
+              className="px-8 py-3 border-2 border-brass text-brass hover:bg-parchment hover:text-abyss transition-all duration-300 font-heading uppercase tracking-wider"
             >
               Upcoming Shows
             </Link>
@@ -93,15 +93,15 @@ export default function Home() {
           <div className="section-divider" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="font-display text-5xl text-crimson fire-glow">
+              <h2 className="font-display text-5xl text-gold fire-glow">
                 Overture
               </h2>
-              <h3 className="font-heading text-2xl text-heat">of the Damned</h3>
-              <p className="text-white/80 leading-relaxed font-body">
-                Forged in the fires of San Diego in 2022, <strong className="text-crimson">THEOSIS</strong> combines
+              <h3 className="font-heading text-2xl text-brass">of the Damned</h3>
+              <p className="text-bone/90 leading-relaxed font-body">
+                Forged in the fires of San Diego in 2022, <strong className="text-gold">THEOSIS</strong> combines
                 the brutal precision of melodic death metal with the relentless energy of speed and thrash.
               </p>
-              <p className="text-white/80 leading-relaxed font-body">
+              <p className="text-bone/90 leading-relaxed font-body">
                 Powerful vocals collide with hard-hitting double bass and harmonized guitar riffs,
                 creating a sonic cathedral of darkness and destruction.
               </p>
@@ -111,7 +111,7 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="gothic-border p-8 bg-ooze/10 backdrop-blur-sm">
+              <div className="gothic-border p-8 bg-charcoal backdrop-blur-sm">
                 <Image
                   src="/images/organist.png"
                   alt="The Organist"
@@ -126,20 +126,20 @@ export default function Home() {
       </section>
 
       {/* Latest Release Section */}
-      <section className="py-20 px-4 bg-ooze/5">
+      <section className="py-20 px-4 bg-charcoal/50">
         <div className="max-w-6xl mx-auto text-center">
           <div className="section-divider" />
-          <h2 className="font-display text-5xl text-heat fire-glow mb-8">
+          <h2 className="font-display text-5xl text-gold fire-glow mb-8">
             LATEST RELEASE
           </h2>
           <div className="max-w-2xl mx-auto card p-8 space-y-6">
-            <h3 className="font-heading text-3xl text-crimson">
+            <h3 className="font-heading text-3xl text-brass">
               Overture of the Damned
             </h3>
-            <p className="text-white/70 font-body">
+            <p className="text-bone/80 font-body">
               Released May 2022 via Clarity Recordings
             </p>
-            <p className="text-white/80 font-body leading-relaxed">
+            <p className="text-bone/90 font-body leading-relaxed">
               Recorded at Clarity Recordings in San Diego by Sean Tolle.
               A unique melodic death metal inspired by classic metal music.
             </p>
@@ -155,13 +155,13 @@ export default function Home() {
       {/* Call to Action */}
       <section className="py-32 px-4 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-crimson rounded-full blur-[150px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold rounded-full blur-[150px]" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto space-y-8">
-          <h2 className="font-display text-6xl text-heat fire-glow">
+          <h2 className="font-display text-6xl text-gold fire-glow">
             ENTER THE CATHEDRAL
           </h2>
-          <p className="font-heading text-xl text-white/80">
+          <p className="font-heading text-xl text-bone/90">
             Join us in the darkness. Follow our journey into the abyss.
           </p>
           <Link href="/contact" className="btn-primary inline-block">

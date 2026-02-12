@@ -20,7 +20,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-darkness/95 backdrop-blur-sm border-b border-ooze">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-abyss/95 backdrop-blur-sm border-b border-stone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -30,7 +30,7 @@ export default function Navigation() {
               alt="Theosis"
               width={150}
               height={50}
-              className="h-12 w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(221,141,82,0.6)]"
+              className="h-12 w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(201,164,107,0.6)]"
               priority
             />
           </Link>
@@ -43,16 +43,16 @@ export default function Navigation() {
                 href={link.href}
                 className={`font-heading text-sm uppercase tracking-wider transition-all duration-300 ${
                   pathname === link.href
-                    ? "text-heat font-bold"
-                    : "text-white hover:text-crimson"
+                    ? "text-gold font-bold"
+                    : "text-bone hover:text-parchment"
                 }`}
               >
                 {link.label}
                 {pathname === link.href && (
                   <motion.div
                     layoutId="underline"
-                    className="h-0.5 bg-heat mt-1"
-                    style={{ boxShadow: "0 0 10px var(--color-heat)" }}
+                    className="h-0.5 bg-brass mt-1"
+                    style={{ boxShadow: "0 0 10px var(--color-brass)" }}
                   />
                 )}
               </Link>
@@ -62,7 +62,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-white hover:text-crimson transition-colors"
+            className="md:hidden p-2 text-bone hover:text-parchment transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -91,7 +91,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-darkness border-t border-ooze"
+            className="md:hidden bg-abyss border-t border-stone"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -101,8 +101,8 @@ export default function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block font-heading text-lg uppercase tracking-wider transition-all duration-300 ${
                     pathname === link.href
-                      ? "text-heat font-bold"
-                      : "text-white hover:text-crimson"
+                      ? "text-gold font-bold"
+                      : "text-bone hover:text-parchment"
                   }`}
                 >
                   {link.label}

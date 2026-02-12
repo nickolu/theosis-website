@@ -5,10 +5,26 @@
 /* Theosis - Infernal Cathedral Theme */
 
 :root {
-  --color-darkness: #000000;
-  --color-crimson: #b6344e;
-  --color-heat: #dd8d52;
-  --color-ooze: #573861;
+  /* Core Foundation (Background + Structure) */
+  --color-abyss: #0B0B0B;
+  --color-charcoal: #1A1A18;
+  --color-stone: #2C2A24;
+  
+  /* Aged Gold (Primary Accent System) */
+  --color-gold: #C9A46B;
+  --color-brass: #A9834E;
+  --color-parchment: #E1C28C;
+  
+  /* Sickly Arcane Greens (Secondary Accent) */
+  --color-necrotic: #6F7C57;
+  --color-moss: #4B5A3C;
+  
+  /* Blood Accent */
+  --color-crimson: #6B1F2B;
+  --color-vein: #8E2E3B;
+  
+  /* Bone Highlight */
+  --color-bone: #B8A78A;
 }
 
 * {
@@ -22,8 +38,8 @@ html {
 }
 
 body {
-  background-color: var(--color-darkness);
-  color: #ffffff;
+  background-color: var(--color-abyss);
+  color: var(--color-bone);
   font-family: var(--font-roboto);
   overflow-x: hidden;
 }
@@ -34,16 +50,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-darkness);
+  background: var(--color-abyss);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ooze);
+  background: var(--color-stone);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-crimson);
+  background: var(--color-brass);
 }
 
 /* Typography */
@@ -52,32 +68,40 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Fire glow effect - subtle version for readability */
+/* Gold glow effect - subtle version for readability */
 .fire-glow {
   text-shadow:
-    0 0 8px rgba(221, 141, 82, 0.4),
-    0 0 15px rgba(182, 52, 78, 0.3);
+    0 0 8px rgba(201, 164, 107, 0.4),
+    0 0 15px rgba(169, 131, 78, 0.3);
 }
 
-/* Strong fire glow for loader only */
+/* Strong gold glow for loader only */
 .fire-glow-strong {
   text-shadow:
-    0 0 10px var(--color-heat),
-    0 0 20px var(--color-heat),
-    0 0 30px var(--color-crimson);
+    0 0 10px var(--color-gold),
+    0 0 20px var(--color-brass),
+    0 0 30px var(--color-parchment);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(201, 164, 107, 0.5);
+}
+
+.brass-glow {
+  box-shadow: 0 0 20px rgba(169, 131, 78, 0.5);
 }
 
 .crimson-glow {
-  box-shadow: 0 0 20px rgba(182, 52, 78, 0.5);
+  box-shadow: 0 0 20px rgba(107, 31, 43, 0.5);
 }
 
-.heat-glow {
-  box-shadow: 0 0 20px rgba(221, 141, 82, 0.5);
+.necrotic-glow {
+  box-shadow: 0 0 20px rgba(111, 124, 87, 0.5);
 }
 
 /* Gothic border effect */
 .gothic-border {
-  border: 2px solid var(--color-ooze);
+  border: 2px solid var(--color-stone);
   position: relative;
 }
 
@@ -85,15 +109,15 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: -2px;
-  border: 1px solid var(--color-crimson);
+  border: 1px solid var(--color-brass);
   opacity: 0.3;
   pointer-events: none;
 }
 
 /* Button styles */
 .btn-primary {
-  background: var(--color-heat);
-  color: var(--color-darkness);
+  background: var(--color-brass);
+  color: var(--color-abyss);
   padding: 0.75rem 2rem;
   border: none;
   font-weight: 700;
@@ -107,20 +131,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
+  background: var(--color-parchment);
+  box-shadow: 0 0 30px rgba(225, 194, 140, 0.6);
+}
+
+/* Danger button styles */
+.btn-danger {
   background: var(--color-crimson);
-  box-shadow: 0 0 30px rgba(182, 52, 78, 0.6);
+  color: var(--color-bone);
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-danger:hover {
+  background: var(--color-vein);
+  box-shadow: 0 0 30px rgba(142, 46, 59, 0.6);
 }
 
 /* Link styles */
 a {
-  color: #ffffff;
+  color: var(--color-bone);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-heat);
-  text-shadow: 0 0 10px rgba(221, 141, 82, 0.5);
+  color: var(--color-gold);
+  text-shadow: 0 0 10px rgba(201, 164, 107, 0.5);
 }
 
 /* Page transition container */
@@ -137,9 +182,9 @@ a:hover {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(87, 56, 97, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(182, 52, 78, 0.1) 0%, transparent 50%),
-    var(--color-darkness);
+    radial-gradient(ellipse at 20% 50%, rgba(111, 124, 87, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(107, 31, 43, 0.1) 0%, transparent 50%),
+    var(--color-abyss);
   z-index: -1;
   pointer-events: none;
 }
@@ -150,9 +195,9 @@ a:hover {
   background: linear-gradient(
     to right,
     transparent,
-    var(--color-ooze) 20%,
-    var(--color-crimson) 50%,
-    var(--color-ooze) 80%,
+    var(--color-stone) 20%,
+    var(--color-brass) 50%,
+    var(--color-stone) 80%,
     transparent
   );
   margin: 4rem 0;
@@ -160,15 +205,15 @@ a:hover {
 
 /* Card styles */
 .card {
-  background: rgba(87, 56, 97, 0.2);
-  border: 1px solid var(--color-ooze);
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-stone);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  border-color: var(--color-crimson);
-  box-shadow: 0 0 30px rgba(182, 52, 78, 0.3);
+  border-color: var(--color-brass);
+  box-shadow: 0 0 30px rgba(169, 131, 78, 0.3);
   transform: translateY(-5px);
 }
 

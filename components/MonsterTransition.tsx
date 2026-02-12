@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 
 // Map specific monsters to specific routes
 const monsterMap: Record<string, { src: string; alt: string; width: number; height: number }> = {
-  "/": { src: "/images/organist.png", alt: "The Organist", width: 500, height: 500 },
+  "/": { src: "/images/conductor.png", alt: "The Conductor", width: 500, height: 500 },
   "/band": { src: "/images/bug-monster.png", alt: "Bug Monster", width: 400, height: 500 },
   "/music": { src: "/images/demon.png", alt: "Demon", width: 400, height: 500 },
-  "/shows": { src: "/images/zombies.png", alt: "Zombies", width: 500, height: 500 },
+  "/shows": { src: "/images/zombies-xl.png", alt: "Zombies", width: 500, height: 500 },
   "/media": { src: "/images/lizardman.png", alt: "Lizardman", width: 350, height: 500 },
   "/contact": { src: "/images/organist.png", alt: "The Organist", width: 500, height: 500 },
 };
@@ -50,7 +50,7 @@ export default function MonsterTransition({ children }: MonsterTransitionProps) 
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-darkness z-40"
+              className="fixed inset-0 bg-abyss z-40"
             />
 
             {/* Monster animation - slides across screen */}
@@ -75,7 +75,7 @@ export default function MonsterTransition({ children }: MonsterTransitionProps) 
                 }}
                 className="relative"
                 style={{
-                  filter: "drop-shadow(0 0 30px rgba(182, 52, 78, 0.8))",
+                  filter: "drop-shadow(0 0 30px rgba(201, 164, 107, 0.8))",
                 }}
               >
                 <Image
