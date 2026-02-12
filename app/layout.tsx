@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import AtmosphericParticles from "@/components/AtmosphericParticles";
 import Loader from "@/components/Loader";
 import ParallaxBackground from "@/components/ParallaxBackground";
+import Footer from "@/components/Footer";
 import { defaultMetadata } from "@/lib/seo-config";
 import { generateWebsiteSchema } from "@/lib/structured-data";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

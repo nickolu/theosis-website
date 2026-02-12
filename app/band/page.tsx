@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import DefaultPage from "@/components/templates/page/default";
 import PageSection from "@/components/ui/page-section";
@@ -120,6 +121,9 @@ export default function BandPage() {
             OUR STORY
           </h2>
           <div className="space-y-6 text-bone/90 font-body leading-relaxed">
+            <p className="text-lg">
+              The name <Link href="/theosis" className="text-brass hover:text-parchment transition-colors font-bold">THEOSIS</Link>, drawn from ancient Eastern Christian theology, represents transformation and union with the divine—a concept that mirrors our musical journey from darkness to transcendence.
+            </p>
             <p className="text-lg">
               <strong className="text-gold">THEOSIS</strong> was born in 2012 from the vision of guitarist Dana Roselli,
               who sought to create a sound that merged the technical precision of melodic death metal

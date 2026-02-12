@@ -16,8 +16,9 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "#DC143C",
+          color: "#B8A78A",
           fontWeight: "bold",
+          fontFamily: "Times New Roman, serif",
         }}
       >
         T
